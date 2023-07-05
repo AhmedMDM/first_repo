@@ -1,0 +1,38 @@
+    VAR
+
+    Variable sentence : string
+    Variable length : integer
+    Variable word : integer
+    Variable vowel : integer
+
+BEGIN Algorithm
+    
+    Write "Please enter a sentence"
+    Read sentence
+    
+    length <- 0
+    word <- 0
+    vowel <- 0
+    
+    For each character in sentence
+        If character is not equal to '.'
+            length <- length + 1
+            
+            If character is a ' ' or '.'
+                If the previous character was not a ' ' or '.'
+                    word <- word + 1
+                End If
+            End If
+            
+            If character is a vowel (a, e, i, o, u)
+                vowel <- vowel + 1
+            End If
+        Else
+            Exit the loop
+        End If
+    End For
+    
+    Write "Length of the sentence:", length
+    Write "Number of words in the sentence:", word
+    Write "Number of vowels in the sentence:", vowel
+End Algorithm
